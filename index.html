@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raya Spin App</title>
+    <link rel="shortcut icon" href="asset/9092435.png">
+    <!-- Google Font -->
+    <!-- href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" -->
+    <link
+      href="asset/css/fonts.css"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body>
+    <h1 style="color:#fff; position: absolute; margin:auto; font-size:medium; bottom:3px;">انتخب منتج العام من المستهلك الجزائري</h1>
+  <div class="wrapper">
+    <div id="gift" style="display:none;">
+      <form class="modal-content" action="#">
+        <div class="container">
+          <h1>Determine gifts</h1>
+          <p>Be sure to fill out all entries</p>
+          <form action="#"> 
+
+          
+          <table style="margin: auto; width:100%;"> 
+            <tr>
+                <td>gift N° 1</td>
+                <td><input type="text" class="bestelformulier" id="inputfield1"></td>
+                <td><input type="file" class="fileformulier" accept="image/*" id="inputfile1"></td>
+                <td>
+                  <label for="inputfile1"> 
+                    <img id="imgfile1" style="width: 3em; margin: auto;" src="asset/img/gift2.png" alt="img" />
+                  </label>
+                </td>
+            </tr>
+            <tr>
+                <td>gift N° 2</td>
+                <td><input type="text" class="bestelformulier" id="inputfield2"></td>
+                <td><input type="file" class="fileformulier" accept="image/*" id="inputfile2"></td>
+                <td>
+                  <label for="inputfile2"> 
+                    <img  id="imgfile2" style="width: 3em; margin: auto;" src="asset/img/gift2.png" alt="img" />
+                  </label>
+                </td>
+            </tr>
+            <tr>
+                <td>gift N° 3</td>
+                <td><input type="text" class="bestelformulier" id="inputfield3"></td>
+                <td><input type="file" class="fileformulier" accept="image/*"  id="inputfile3"></td>
+                <td>
+                  <label for="inputfile3"> 
+                    <img  id="imgfile3" style="width: 3em; margin: auto;" src="asset/img/gift2.png" alt="img" />
+                  </label>
+                </td>
+            </tr>
+            <tr>
+                <td>gift N° 4</td>
+                <td><input type="text" class="bestelformulier" id="inputfield4"></td>
+                <td><input type="file" class="fileformulier" accept="image/*"  id="inputfile4"></td>
+                <td>
+                  <label for="inputfile4"> 
+                    <img id="imgfile4" style="width: 3em; margin: auto;" src="asset/img/gift2.png" alt="img" />
+                  </label>
+                </td>
+            </tr>
+            <tr>
+                <td>gift N° 5</td>
+                <td><input type="text" class="bestelformulier" id="inputfield5"></td>
+                <td><input type="file" class="fileformulier" accept="image/*"  id="inputfile5"></td>
+                <td>
+                  <label for="inputfile5"> 
+                    <img id="imgfile5" style="width: 3em; margin: auto;" src="asset/img/gift2.png" alt="img" />
+                  </label>
+                </td>
+            </tr>
+            <tr>
+              <td>gift N° 6</td>
+              <td><input type="text" class="bestelformulier" id="inputfield6"></td>
+              <td><input type="file" class="fileformulier" accept="image/*"  id="inputfile6"></td>
+              <td>
+                <label for="inputfile6"> 
+                  <img id="imgfile6" style="width: 3em; margin: auto;" src="asset/img/gift2.png" alt="img" />
+                </label>
+              </td>
+            </tr>
+
+          </table>
+        </form>
+          <div class="clearfix">
+            <button type="button" onclick="loadPage('home')" class="cancelbtn config-btn">Home</button>
+            <button type="button" onclick="saveGifts()" class="savebtn config-btn">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="user" style="display:none;">
+      <form class="modal-content" action="#">
+        <div class="container">
+          <h1>Users</h1>
+          <button  type="button" onclick="download_users()" class="config-btn" >Download</button>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+          <div style="overflow:auto; max-height: 90vh;"> 
+            <table  id="myTable">
+              <tr class="header">
+                <th style="width:40%;">Username</th>
+                <th style="width:20%;">GIFT</th>
+                <th style="width:20%;">Date</th>
+                <th style="width:20%;">Action</th>
+              </tr>
+            </table>
+          </div>
+            
+          
+          <div class="clearfix">
+            <button type="button" onclick="loadPage('home')" class="cancelbtn config-btn">Home</button>
+            <button type="button" onclick="clearUsers()" style="background-color: #f44336;" class="savebtn config-btn">Clear</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="home"> 
+
+        <div class="cader">  
+  
+          <table style="margin: auto; width:100%; justify-content: space-between;"> 
+            <tr>
+              <td>
+                <input type="text" class="bestelformulier" id="username" placeholder="Username">
+              </td>
+              <td> 
+                <div> 
+  
+                  <button style="margin: 1px; border : none; background: none;" onclick="loadPage('gift')"><img style="width: 3em; margin: auto;" src="asset/img/gift.png" alt="Gifts" /></button>
+                </div>
+                <div> 
+  
+                  <button style="margin: 1px; border : none; background: none;" onclick="loadPage('user')"><img  style="width: 3em; margin: auto;" src="asset/img/users.png" alt="Users" /></button>
+                </div>
+              </td>
+            </tr>
+          </table>
+  
+        </div>
+        <div class="container">
+          <canvas id="wheel"></canvas>
+          <img id="spin-btn" src="asset/rayaLogo.PNG" alt="spin" />
+          <img src="asset/svg/spinner-arrow-.svg" alt="spinner-arrow" />
+        </div>
+        <div class="cader"> 
+          <div id="final-value">
+            <p>Click On The Spin Button To Start</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="win" style="display:none; height: 80%; 
+        background-image: url('asset/bg.PNG'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+      ">
+        <img style="width: 100%; height: 100%; position: absolute;  margin: auto;" src="asset/img/2yqT.gif" alt="img" />
+          <div class="container">
+            <span onclick="loadPage('home')" class="close" title="Close Modal">&times;</span>
+            <h1 style="width: 100%; margin-top: 48px; margin-bottom: 20px; color: aliceblue;
+              background-color: #d53275;" id="usernameWin">Username</h1>
+            <div style="width: 100%; height: 80%; margin: auto;display: flex;justify-content: center;align-items: center;"> 
+              <img id="imgWin" style="width: 50%; margin: auto;" src="asset/img/gift2.png" alt="img" />
+            </div>
+              
+            <h1 style="width: 100%; margin-bottom: 20px; margin-top: 20px;" id="giftWin">gift</h1>
+          </div>
+      </div>
+
+  </div>
+
+    <!-- Chart JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script> -->
+    <!-- Script -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>   -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js'></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- Chart JS -->
+    <script src="asset/js/chart.min.js"></script>
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <script src="asset/js/chartjs-plugin-datalabels.min.js"></script>
+    <script src="asset/js/jquery.min.js"></script>
+    <!-- Script -->
+    <script src='asset/js/FileSaver.min.js'></script>
+    <script src="asset/js/sweetalert2.all.min.js"></script>  
+    <script src="asset/js/script.js"></script>
+  </body>
+</html>
